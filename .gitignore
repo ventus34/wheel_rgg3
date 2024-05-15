@@ -1,0 +1,9 @@
+sound/clips/
+sound/music/
+saves/
+out/
+release/
+target/
+*.afphoto
+.idea
+src/main/resources/ventus/rggwheel/fonts/

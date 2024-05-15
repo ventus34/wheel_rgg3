@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane opacity="0.0" prefHeight="1025.0" prefWidth="1480.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ventus.rggwheel.controllers.mono.WheelMonoController">
+   <AnchorPane fx:id="monoPane" cache="true" cacheHint="SPEED" layoutX="570.0" layoutY="250.0" prefHeight="407.0" prefWidth="472.0">
+      <children>
+         <AnchorPane fx:id="wheelPane" prefHeight="550.0" prefWidth="550.0" rotate="180.0">
+            <children>
+               <Arc fill="#ff2121" layoutX="275.0" layoutY="275.0" length="18.0" radiusX="275.0" radiusY="275.0" stroke="BLACK" strokeType="INSIDE" type="ROUND">
+                  <effect>
+                     <InnerShadow height="75.62" radius="18.405" width="0.0" />
+                  </effect>
+               </Arc>
+               <Arc fill="#ff9121" layoutX="275.0" layoutY="275.0" length="18.0" radiusX="275.0" radiusY="275.0" startAngle="18.0" stroke="BLACK" strokeType="INSIDE" type="ROUND">
+                  <effect>
+                     <InnerShadow height="75.62" radius="18.405" width="0.0" />
+                  </effect>
+               </Arc>
+               <Arc fill="#ffcf21" layoutX="275.0" layoutY="275.0" length="18.0" radiusX="275.0" radiusY="275.0" startAngle="36.0" stroke="BLACK" strokeType="INSIDE" type="ROUND">
+                  <effect>
+                     <InnerShadow height="75.62" radius="18.405" width="0.0" />
+                  </effect>
+               </Arc>
+               <Arc fill="#faff1f" layoutX="275.0" layoutY="275.0" length="18.0" radiusX="275.0" radiusY="275.0" startAngle="54.0" stroke="BLACK" strokeType="INSIDE" type="ROUND">
+                  <effect>
+                     <InnerShadow height="75.62" radius="18.405" width="0.0" />
+                  </effect>
+               </Arc>
+               <Arc fill="#c4ff1f" layoutX="275.0" layoutY="275.0" length="18.0" radiusX="275.0" radiusY="275.0" startAngle="72.0" stroke="BLACK" strokeType="INSIDE" type="ROUND">
+                  <effect>
+                     <InnerShadow height="75.62" radius="18.405" width="0.0" />
+                  </effect>
+               </Arc>
+               <Arc fill="#73ff21" layoutX="275.0" layoutY="275.0" length="18.0" radiusX="275.0" radiusY="275.0" startAngle="90.0" stroke="BLACK" strokeType="INSIDE" type="ROUND">
+                  <effect>
+                     <InnerShadow height="75.62" radius="18.405" width="0.0" />
+                  </effect>
+               </Arc>
+               <Arc fill="#21ff64" layoutX="275.0" layoutY="275.0" length="18.0" radiusX="275.0" radiusY="275.0" startAngle="108.0" stroke="BLACK" strokeType="INSIDE" type="ROUND">
+                  <effect>
+                     <InnerShadow height="75.62" radius="18.405" width="0.0" />
+                  </effect>
+               </Arc>
+               <Arc fill="#1fffd2" layoutX="275.0" layoutY="275.0" length="18.0" radiusX="275.0" radiusY="275.0" startAngle="126.0" stroke="BLACK" strokeType="INSIDE" type="ROUND">
+                  <effect>
+                     <InnerShadow height="75.62" radius="18.405" width="0.0" />
+                  </effect>
+               </Arc>
+               <Arc fill="#1fedff" layoutX="275.0" layoutY="275.0" length="18.0" radiusX="275.0" radiusY="275.0" startAngle="144.0" stroke="BLACK" strokeType="INSIDE" type="ROUND">
+                  <effect>
+                     <InnerShadow height="75.62" radius="18.405" width="0.0" />
+                  </effect>
+               </Arc>
+               <Arc fill="#1fbcff" layoutX="275.0" layoutY="275.0" length="18.0" radiusX="275.0" radiusY="275.0" startAngle="162.0" stroke="BLACK" strokeType="INSIDE" type="ROUND">
+                  <effect>
+                     <InnerShadow height="75.62" radius="18.405" width="0.0" />
+                  </effect>
+               </Arc>
+               <Arc fill="#1f90ff" layoutX="275.0" layoutY="275.0" length="18.0" radiusX="275.0" radiusY="275.0" startAngle="180.0" stroke="BLACK" strokeType="INSIDE" type="ROUND">
+                  <effect>
+                     <InnerShadow height="75.62" radius="18.405" width="0.0" />
+                  </effect>
+               </Arc>
+               <Arc fill="#1f69ff" layoutX="275.0" layoutY="275.0" length="18.0" radiusX="275.0" radiusY="275.0" startAngle="198.0" stroke="BLACK" strokeType="INSIDE" type="ROUND">
+                  <effect>
+                     <InnerShadow height="75.62" radius="18.405" width="0.0" />
+                  </effect>
+               </Arc>
+               <Arc fill="#1f51ff" layoutX="275.0" layoutY="275.0" length="18.0" radiusX="275.0" radiusY="275.0" startAngle="216.0" stroke="BLACK" strokeType="INSIDE" type="ROUND">
+                  <effect>
+                     <InnerShadow height="75.62" radius="18.405" width="0.0" />
+                  </effect>
+               </Arc>
+               <Arc fill="#1f25ff" layoutX="275.0" layoutY="275.0" length="18.0" radiusX="275.0" radiusY="275.0" startAngle="234.0" stroke="BLACK" strokeType="INSIDE" type="ROUND">
+                  <effect>
+                     <InnerShadow height="75.62" radius="18.405" width="0.0" />
+                  </effect>
+               </Arc>
+               <Arc fill="#5c1fff" layoutX="275.0" layoutY="275.0" length="18.0" radiusX="275.0" radiusY="275.0" startAngle="252.0" stroke="BLACK" strokeType="INSIDE" type="ROUND">
+                  <effect>
+                     <InnerShadow height="75.62" radius="18.405" width="0.0" />
+                  </effect>
+               </Arc>
+               <Arc fill="#7e1fff" layoutX="275.0" layoutY="275.0" length="18.0" radiusX="275.0" radiusY="275.0" startAngle="270.0" stroke="BLACK" strokeType="INSIDE" type="ROUND">
+                  <effect>
+                     <InnerShadow height="75.62" radius="18.405" width="0.0" />
+                  </effect>
+               </Arc>
+               <Arc fill="#af1fff" layoutX="275.0" layoutY="275.0" length="18.0" radiusX="275.0" radiusY="275.0" startAngle="288.0" stroke="BLACK" strokeType="INSIDE" type="ROUND">
+                  <effect>
+                     <InnerShadow height="75.62" radius="18.405" width="0.0" />
+                  </effect>
+               </Arc>
+               <Arc fill="#ff1ff8" layoutX="275.0" layoutY="275.0" length="18.0" radiusX="275.0" radiusY="275.0" startAngle="306.0" stroke="BLACK" strokeType="INSIDE" type="ROUND">
+                  <effect>
+                     <InnerShadow height="75.62" radius="18.405" width="0.0" />
+                  </effect>
+               </Arc>
+               <Arc fill="#ff1f92" layoutX="275.0" layoutY="275.0" length="18.0" radiusX="275.0" radiusY="275.0" startAngle="324.0" stroke="BLACK" strokeType="INSIDE" type="ROUND">
+                  <effect>
+                     <InnerShadow height="75.62" radius="18.405" width="0.0" />
+                  </effect>
+               </Arc>
+               <Arc fill="#ff1f58" layoutX="275.0" layoutY="275.0" length="18.0" radiusX="275.0" radiusY="275.0" startAngle="342.0" stroke="BLACK" strokeType="INSIDE" type="ROUND">
+                  <effect>
+                     <InnerShadow height="75.62" radius="18.405" width="0.0" />
+                  </effect>
+               </Arc>
+               <Circle centerX="275.0" centerY="275.0" radius="15.0" stroke="BLACK" strokeType="INSIDE"/>
+            </children>
+            <effect>
+               <InnerShadow choke="0.7" height="10.0" radius="4.5" width="10.0" />
+            </effect>
+         </AnchorPane>
+         <AnchorPane fx:id="labelPane">
+            <children>
+               <Label fx:id="prizeLabel_mono1" layoutX="9.0" layoutY="207.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="9.0" text="Cat in the bag" textFill="WHITE">
+                  <font>
+                     <Font name="Bit Cell" size="46.0" />
+                  </font>
+                  <effect>
+                     <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
+                  </effect>
+               </Label>
+               <Label fx:id="prizeLabel_mono2" layoutX="24.0" layoutY="160.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="27.0" text="Cat in the bag" textFill="WHITE">
+                  <font>
+                     <Font name="Bit Cell" size="46.0" />
+                  </font>
+                  <effect>
+                     <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
+                  </effect>
+               </Label>
+               <Label fx:id="prizeLabel_mono3" layoutX="53.0" layoutY="121.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="45.0" text="Cat in the bag" textFill="WHITE">
+                  <font>
+                     <Font name="Bit Cell" size="46.0" />
+                  </font>
+                  <effect>
+                     <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
+                  </effect>
+               </Label>
+               <Label fx:id="prizeLabel_mono4" layoutX="93.0" layoutY="94.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="63.0" text="Cat in the bag" textFill="WHITE">
+                  <font>
+                     <Font name="Bit Cell" size="46.0" />
+                  </font>
+                  <effect>
+                     <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
+                  </effect>
+               </Label>
+               <Label fx:id="prizeLabel_mono5" layoutX="139.0" layoutY="81.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="81.0" text="Cat in the bag" textFill="WHITE">
+                  <font>
+                     <Font name="Bit Cell" size="46.0" />
+                  </font>
+                  <effect>
+                     <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
+                  </effect>
+               </Label>
+               <Label fx:id="prizeLabel_mono6" layoutX="189.0" layoutY="81.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="99.0" text="Cat in the bag" textFill="WHITE">
+                  <font>
+                     <Font name="Bit Cell" size="46.0" />
+                  </font>
+                  <effect>
+                     <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
+                  </effect>
+               </Label>
+               <Label fx:id="prizeLabel_mono7" layoutX="235.0" layoutY="96.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="117.0" text="Cat in the bag" textFill="WHITE">
+                  <font>
+                     <Font name="Bit Cell" size="46.0" />
+                  </font>
+                  <effect>
+                     <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
+                  </effect>
+               </Label>
+               <Label fx:id="prizeLabel_mono8" layoutX="272.0" layoutY="127.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="135.0" text="Cat in the bag" textFill="WHITE">
+                  <font>
+                     <Font name="Bit Cell" size="46.0" />
+                  </font>
+                  <effect>
+                     <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
+                  </effect>
+               </Label>
+               <Label fx:id="prizeLabel_mono9" layoutX="301.0" layoutY="167.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="153.0" text="Cat in the bag" textFill="WHITE">
+                  <font>
+                     <Font name="Bit Cell" size="46.0" />
+                  </font>
+                  <effect>
+                     <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
+                  </effect>
+               </Label>
+               <Label fx:id="prizeLabel_mono10" layoutX="317.0" layoutY="213.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="171.0" text="Cat in the bag" textFill="WHITE">
+                  <font>
+                     <Font name="Bit Cell" size="46.0" />
+                  </font>
+                  <effect>
+                     <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
+                  </effect>
+               </Label>
+               <Label fx:id="prizeLabel_mono11" layoutX="315.0" layoutY="262.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="189.0" text="Cat in the bag" textFill="WHITE">
+                  <font>
+                     <Font name="Bit Cell" size="46.0" />
+                  </font>
+                  <effect>
+                     <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
+                  </effect>
+               </Label>
+               <Label fx:id="prizeLabel_mono12" layoutX="300.0" layoutY="307.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="207.0" text="Cat in the bag" textFill="WHITE">
+                  <font>
+                     <Font name="Bit Cell" size="46.0" />
+                  </font>
+                  <effect>
+                     <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
+                  </effect>
+               </Label>
+               <Label fx:id="prizeLabel_mono13" layoutX="267.0" layoutY="346.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="225.0" text="Cat in the bag" textFill="WHITE">
+                  <font>
+                     <Font name="Bit Cell" size="46.0" />
+                  </font>
+                  <effect>
+                     <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
+                  </effect>
+               </Label>
+               <Label fx:id="prizeLabel_mono14" layoutX="228.0" layoutY="372.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="243.0" text="Cat in the bag" textFill="WHITE">
+                  <font>
+                     <Font name="Bit Cell" size="46.0" />
+                  </font>
+                  <effect>
+                     <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
+                  </effect>
+               </Label>
+               <Label fx:id="prizeLabel_mono15" layoutX="181.0" layoutY="387.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="261.0" text="Cat in the bag" textFill="WHITE">
+                  <font>
+                     <Font name="Bit Cell" size="46.0" />
+                  </font>
+                  <effect>
+                     <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
+                  </effect>
+               </Label>
+               <Label fx:id="prizeLabel_mono16" layoutX="133.0" layoutY="386.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="279.0" text="Cat in the bag" textFill="WHITE">
+                  <font>
+                     <Font name="Bit Cell" size="46.0" />
+                  </font>
+                  <effect>
+                     <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
+                  </effect>
+               </Label>
+               <Label fx:id="prizeLabel_mono17" layoutX="88.0" layoutY="370.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="297.0" text="Cat in the bag" textFill="WHITE">
+                  <font>
+                     <Font name="Bit Cell" size="46.0" />
+                  </font>
+                  <effect>
+                     <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
+                  </effect>
+               </Label>
+               <Label fx:id="prizeLabel_mono18" layoutX="50.0" layoutY="342.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="315.0" text="Cat in the bag" textFill="WHITE">
+                  <font>
+                     <Font name="Bit Cell" size="46.0" />
+                  </font>
+                  <effect>
+                     <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
+                  </effect>
+               </Label>
+               <Label fx:id="prizeLabel_mono19" layoutX="21.0" layoutY="304.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="333.0" text="Cat in the bag" textFill="WHITE">
+                  <font>
+                     <Font name="Bit Cell" size="46.0" />
+                  </font>
+                  <effect>
+                     <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
+                  </effect>
+               </Label>
+               <Label fx:id="prizeLabel_mono20" layoutX="8.0" layoutY="256.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="351.0" text="Cat in the bag" textFill="WHITE">
+                  <font>
+                     <Font name="Bit Cell" size="46.0" />
+                  </font>
+                  <effect>
+                     <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
+                  </effect>
+               </Label>
+            </children>
+         </AnchorPane>
+      </children>
+   </AnchorPane>
+   <Label layoutX="395.0" layoutY="810.0" prefHeight="54.0" prefWidth="667.0" text="Up/Down - rotate wheel" textFill="#50793C">
+      <font>
+         <Font name="Bit Cell" size="58.0" />
+      </font>
+   </Label>
+   <Label layoutX="395.0" layoutY="850.0" prefHeight="54.0" prefWidth="605.0" text="Left/Right - set spin time" textFill="#50793C">
+      <font>
+         <Font name="Bit Cell" size="58.0" />
+      </font>
+   </Label>
+   <Label layoutX="395.0" layoutY="770.0" prefHeight="39.0" prefWidth="390.0" text="Controls:" textFill="#314A24">
+      <font>
+         <Font name="Bit Cell" size="60.0" />
+      </font>
+   </Label>
+   <Label layoutX="395.0" layoutY="180.0" prefHeight="87.0" prefWidth="368.0" text="Spin time:" textFill="#314A24">
+      <font>
+         <Font name="Bit Cell" size="80.0" />
+      </font>
+   </Label>
+   <Label fx:id="spinTime" layoutX="640.0" layoutY="187.0" prefHeight="54.0" prefWidth="247.0" text="10" textFill="#50793C">
+      <font>
+         <Font name="Bit Cell" size="80.0" />
+      </font>
+   </Label>
+   <Label layoutX="458.0" layoutY="293.0" prefHeight="463.0" prefWidth="514.0" text="---&gt;">
+      <font>
+         <Font name="Bit Cell" size="96.0" />
+      </font>
+      <effect>
+         <DropShadow blurType="GAUSSIAN">
+            <color>
+               <Color opacity="0.2956521809101105" />
+            </color>
+         </DropShadow>
+      </effect>
+   </Label>
+</AnchorPane>
