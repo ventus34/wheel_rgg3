@@ -98,39 +98,22 @@ public abstract class WheelController extends FXMLController {
         retroBoy.unlockButtons();
         PrizeEnum currentPrize = prizesService.getPrize(WheelUtils.indicatedPrize(wheel.getRotate()));
         saveResult(currentPrize);
-        if(!currentPrize.equals(PrizeEnum.DOUBLE)) {
-            WheelUtils.wheelMultiplier = 1;
-        }
+//        if(!currentPrize.equals(PrizeEnum.CURSE)) {
+//            WheelUtils.wheelMultiplier = 1;
+//        }
         retroBoy.setPrizeDesc(prizesService.getPrize(WheelUtils.indicatedPrize(Math.abs(wheel.getRotate())%360)));
         retroBoy.checkPrize();
     }
 
     private void saveResult(PrizeEnum currentPrize) {
         retroBoy.getProgress().getPrizesHistory().add(currentPrize);
-        if(currentPrize.equals(PrizeEnum.DOUBLE)) {
-            WheelUtils.wheelMultiplier = WheelUtils.wheelMultiplier * 2;
+        if(currentPrize.equals(PrizeEnum.CURSE)) {
+            //TODO cursed wheel
         }
         System.out.println(currentPrize);
-        Integer potions = getInStockAmount(ItemEnum.Potion);
-        Integer hints = getInStockAmount(ItemEnum.Hints);
-        if(currentPrize.equals(PrizeEnum.POTION)){
-            potions = potions + WheelUtils.wheelMultiplier;
-            retroBoy.getProgress().getInventory().replace(ItemEnum.Potion, potions);
-            retroBoy.updateInventory();
-        }
-        if(currentPrize.equals(PrizeEnum.FIVE_HINTS)){
-            hints = hints + 5 * WheelUtils.wheelMultiplier;
-            retroBoy.getProgress().getInventory().replace(ItemEnum.Hints, hints);
-            retroBoy.updateInventory();
-        }
-        GoogleFormsPostService.savePrizeToSpreadsheet(currentPrize.getName(), "Hints: " + hints + "; Potions: " + potions);
+        GoogleFormsPostService.savePrizeToSpreadsheet(currentPrize.getName(), "");
         retroBoy.save();
     }
-
-    private Integer getInStockAmount(ItemEnum item) {
-        return retroBoy.getProgress().getInventory().get(item);
-    }
-
     protected void goToNext(AnchorPane wheelPane) {
         double destination = wheelPane.getRotate() + 3 * WheelUtils.getAngle()/2 - wheelPane.getRotate()%WheelUtils.getAngle();
         rotationAnimation(wheelPane, destination);
