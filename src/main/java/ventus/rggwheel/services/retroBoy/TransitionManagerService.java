@@ -19,7 +19,7 @@ public class TransitionManagerService {
     private final int numberOfScenes;
 
     public enum SceneEnum {
-        SPLASH, WHEEL, PRIZE, INVENTORY
+        SPLASH, WHEEL, PRIZE
     }
 
     public TransitionManagerService(ArrayList<FXMLController> monoScenes, ArrayList<FXMLController> colorScenes, BackgroundController backgroundController) {
@@ -82,10 +82,6 @@ public class TransitionManagerService {
             isCheckScene = false;
         }
         return isCheckScene;
-    }
-
-    public boolean isInventory(){
-        return currentScene == SceneEnum.INVENTORY.ordinal();
     }
 
 

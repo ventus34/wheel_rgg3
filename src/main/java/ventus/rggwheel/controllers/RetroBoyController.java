@@ -186,7 +186,7 @@ public class RetroBoyController {
         colorScenesControllers.add(splashColorController);
         colorScenesControllers.add(prizeDescriptionColorController);
         colorScenesControllers.add(wheelColorController);
-        colorScenesControllers.add(inventoryColorController);
+//        colorScenesControllers.add(inventoryColorController);
 //        colorScenesControllers.add(prizesHistoryColorController);
 //        colorScenesControllers.add(statisticsColorController);
 
@@ -194,7 +194,7 @@ public class RetroBoyController {
         monoScenesControllers.add(splashMonoController);
         monoScenesControllers.add(prizeDescriptionMonoController);
         monoScenesControllers.add(wheelMonoController);
-        monoScenesControllers.add(inventoryMonoController);
+//        monoScenesControllers.add(inventoryMonoController);
 //        monoScenesControllers.add(prizesHistoryMonoController);
 //        monoScenesControllers.add(statisticsMonoController);
 
@@ -329,7 +329,9 @@ public class RetroBoyController {
     }
 
     public boolean isInventory(){
-        return transitionManagerService.isInventory();
+        return false;
+        //TODO remove
+//        return transitionManagerService.isInventory();
     }
 
     void lockButtons() {
