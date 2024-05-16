@@ -7,3 +7,5 @@ target/
 *.afphoto
 .idea
 src/main/resources/ventus/rggwheel/fonts/
+wheel_launch4j_local.xml
+config.properties
