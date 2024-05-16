@@ -95,7 +95,7 @@
          </AnchorPane>
          <AnchorPane fx:id="labelPane">
             <children>
-               <Label fx:id="prizeLabel_mono1" layoutX="10.0" layoutY="196.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="15.0" text="???" textFill="WHITE">
+               <Label fx:id="prizeLabel_mono1" layoutX="15.0" layoutY="199.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="13.0" text="???" textFill="WHITE">
                   <font>
                      <Font name="Bit Cell" size="46.0" />
                   </font>
@@ -103,7 +103,7 @@
                      <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
                   </effect>
                </Label>
-               <Label fx:id="prizeLabel_mono2" layoutX="45.0" layoutY="133.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="40.4" text="???" textFill="WHITE">
+               <Label fx:id="prizeLabel_mono2" layoutX="43.0" layoutY="139.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="38.0" text="???" textFill="WHITE">
                   <font>
                      <Font name="Bit Cell" size="46.0" />
                   </font>
@@ -111,7 +111,7 @@
                      <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
                   </effect>
                </Label>
-               <Label fx:id="prizeLabel_mono3" layoutX="110.0" layoutY="87.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="71.0" text="???" textFill="WHITE">
+               <Label fx:id="prizeLabel_mono3" layoutX="96.0" layoutY="97.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="64.0" text="???" textFill="WHITE">
                   <font>
                      <Font name="Bit Cell" size="46.0" />
                   </font>
@@ -119,7 +119,7 @@
                      <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
                   </effect>
                </Label>
-               <Label fx:id="prizeLabel_mono4" layoutX="173.0" layoutY="79.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="94.0" text="???" textFill="WHITE">
+               <Label fx:id="prizeLabel_mono4" layoutX="159.0" layoutY="83.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="90.0" text="???" textFill="WHITE">
                   <font>
                      <Font name="Bit Cell" size="46.0" />
                   </font>
@@ -127,7 +127,7 @@
                      <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
                   </effect>
                </Label>
-               <Label fx:id="prizeLabel_mono5" layoutX="243.0" layoutY="108.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="124.0" text="???" textFill="WHITE">
+               <Label fx:id="prizeLabel_mono5" layoutX="224.0" layoutY="97.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="116.0" text="???" textFill="WHITE">
                   <font>
                      <Font name="Bit Cell" size="46.0" />
                   </font>
@@ -135,7 +135,7 @@
                      <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
                   </effect>
                </Label>
-               <Label fx:id="prizeLabel_mono6" layoutX="293.0" layoutY="156.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="150.9" text="???" textFill="WHITE">
+               <Label fx:id="prizeLabel_mono6" layoutX="275.0" layoutY="137.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="141.0" text="???" textFill="WHITE">
                   <font>
                      <Font name="Bit Cell" size="46.0" />
                   </font>
@@ -143,7 +143,7 @@
                      <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
                   </effect>
                </Label>
-               <Label fx:id="prizeLabel_mono7" layoutX="312.0" layoutY="235.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="180.0" text="???" textFill="WHITE">
+               <Label fx:id="prizeLabel_mono7" layoutX="306.0" layoutY="200.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="167.0" text="???" textFill="WHITE">
                   <font>
                      <Font name="Bit Cell" size="46.0" />
                   </font>
@@ -151,7 +151,7 @@
                      <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
                   </effect>
                </Label>
-               <Label fx:id="prizeLabel_mono8" layoutX="296.0" layoutY="304.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="-152.2" text="???" textFill="WHITE">
+               <Label fx:id="prizeLabel_mono8" layoutX="306.0" layoutY="263.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="192.0" text="???" textFill="WHITE">
                   <font>
                      <Font name="Bit Cell" size="46.0" />
                   </font>
@@ -159,7 +159,7 @@
                      <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
                   </effect>
                </Label>
-               <Label fx:id="prizeLabel_mono9" layoutX="248.0" layoutY="356.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="-121.6" text="???" textFill="WHITE">
+               <Label fx:id="prizeLabel_mono9" layoutX="275.0" layoutY="323.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="218.0" text="???" textFill="WHITE">
                   <font>
                      <Font name="Bit Cell" size="46.0" />
                   </font>
@@ -167,7 +167,7 @@
                      <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
                   </effect>
                </Label>
-               <Label fx:id="prizeLabel_mono10" layoutX="172.0" layoutY="387.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="-94.1" text="???" textFill="WHITE">
+               <Label fx:id="prizeLabel_mono10" layoutX="225.0" layoutY="364.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="244.0" text="???" textFill="WHITE">
                   <font>
                      <Font name="Bit Cell" size="46.0" />
                   </font>
@@ -175,7 +175,7 @@
                      <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
                   </effect>
                </Label>
-               <Label fx:id="prizeLabel_mono11" layoutX="109.0" layoutY="376.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="-71.6" text="???" textFill="WHITE">
+               <Label fx:id="prizeLabel_mono11" layoutX="160.0" layoutY="380.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="270.0" text="???" textFill="WHITE">
                   <font>
                      <Font name="Bit Cell" size="46.0" />
                   </font>
@@ -183,7 +183,7 @@
                      <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
                   </effect>
                </Label>
-               <Label fx:id="prizeLabel_mono12" layoutX="43.0" layoutY="333.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="-39.0" text="???" textFill="WHITE">
+               <Label fx:id="prizeLabel_mono12" layoutX="97.0" layoutY="368.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="295.0" text="???" textFill="WHITE">
                   <font>
                      <Font name="Bit Cell" size="46.0" />
                   </font>
@@ -191,7 +191,7 @@
                      <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
                   </effect>
                </Label>
-               <Label fx:id="prizeLabel_mono13" layoutX="9.0" layoutY="274.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="-13.600000000000001" text="???" textFill="WHITE">
+               <Label fx:id="prizeLabel_mono13" layoutX="45.0" layoutY="326.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="321.0" text="???" textFill="WHITE">
                   <font>
                      <Font name="Bit Cell" size="46.0" />
                   </font>
@@ -199,7 +199,7 @@
                      <DropShadow blurType="ONE_PASS_BOX" height="29.9" radius="12.965" spread="0.72" width="23.96" />
                   </effect>
                </Label>
-               <Label fx:id="prizeLabel_mono14" layoutX="9.0" layoutY="274.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="-13.600000000000001" text="???" textFill="WHITE">
+               <Label fx:id="prizeLabel_mono14" layoutX="14.0" layoutY="266.0" opacity="0.95" prefHeight="84.0" prefWidth="230.0" rotate="347.0" text="???" textFill="WHITE">
                   <font>
                      <Font name="Bit Cell" size="46.0" />
                   </font>
