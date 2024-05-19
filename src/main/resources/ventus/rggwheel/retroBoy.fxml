@@ -26,17 +26,11 @@
         <ImageView fitHeight="1036.0" fitWidth="1478.0" mouseTransparent="true" opacity="0.0" pickOnBounds="true" preserveRatio="true">
             <Image url="@retroBoyColor/graphics/button_ab.png" />
         </ImageView>
-        <fx:include fx:id="statisticsColor" source="retroBoyColor/userInterface/statisticsColor.fxml" />
-        <fx:include fx:id="prizesHistoryColor" source="retroBoyColor/userInterface/prizesHistoryColor.fxml" />
-        <fx:include fx:id="prizesHistoryMono" source="retroBoyMono/userInterface/prizesHistoryMono.fxml" />
-        <fx:include fx:id="statisticsMono" source="retroBoyMono/userInterface/statisticsMono.fxml" />
         <Label fx:id="retroboyName" alignment="CENTER" layoutX="366.0" layoutY="902.0" prefHeight="92.0" prefWidth="810.0" text="RETRO BOY" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font name="Emulogic" size="32.0" />
             </font>
         </Label>
-        <fx:include fx:id="inventoryColor" source="retroBoyColor/userInterface/inventoryColor.fxml" />
-        <fx:include fx:id="inventoryMono" source="retroBoyMono/userInterface/inventoryMono.fxml" />
         <Button fx:id="spinButton" disable="true" layoutX="1366.0" layoutY="524.0" mnemonicParsing="false" onAction="#spinAction" opacity="0.0" prefHeight="100.0" prefWidth="63.0" text="Spin a wheel!">
             <font>
                 <Font size="20.0" />

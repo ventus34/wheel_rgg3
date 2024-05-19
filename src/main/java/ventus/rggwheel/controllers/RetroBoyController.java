@@ -87,16 +87,6 @@ public class RetroBoyController {
 
     private Set<Button> buttons;
 
-    //Inventory
-    @FXML
-    private Pane inventoryMono;
-    @FXML
-    private InventoryMonoController inventoryMonoController;
-    @FXML
-    private Pane inventoryColor;
-    @FXML
-    private InventoryColorController inventoryColorController;
-
     //Splash screen
     @FXML
     private AnchorPane splashMono;
@@ -107,16 +97,6 @@ public class RetroBoyController {
     @FXML
     private SplashMonoController splashMonoController;
 
-    //Statistics
-    @FXML
-    private Pane statisticsColor;
-    @FXML
-    private StatisticsColorController statisticsColorController;
-    @FXML
-    private Pane statisticsMono;
-    @FXML
-    private StatisticsMonoController statisticsMonoController;
-
     //Prizes descriptions
     @FXML
     private AnchorPane prizeDescriptionColor;
@@ -126,16 +106,6 @@ public class RetroBoyController {
     private AnchorPane prizeDescriptionMono;
     @FXML
     private PrizeDescriptionMonoController prizeDescriptionMonoController;
-
-    //Prizes history
-    @FXML
-    private Pane prizesHistoryColor;
-    @FXML
-    private PrizesHistoryColorController prizesHistoryColorController;
-    @FXML
-    private Pane prizesHistoryMono;
-    @FXML
-    private PrizesHistoryMonoController prizesHistoryMonoController;
 
     //Wheel
     @FXML
@@ -198,6 +168,7 @@ public class RetroBoyController {
     public void checkPrize() {
         mediaPlayerService.play(MediaPlayerService.AudioPlayerEnum.BUTTON, null);
         spinButton.setDisable(transitionManagerService.checkAndBack());
+//          transitionManagerService.checkAndBack();
     }
 
     @FXML
@@ -276,10 +247,6 @@ public class RetroBoyController {
     }
 
     private void setLabels() {
-        inventoryMonoController.setHintLabel();
-        inventoryColorController.setHintLabel();
-        inventoryMonoController.setRerollLabel();
-        inventoryColorController.setRerollLabel();
         wheelMonoController.setLabels();
         wheelColorController.setLabels();
     }
@@ -306,23 +273,13 @@ public class RetroBoyController {
         wheelMonoController.setPrizesService(prizesService);
         wheelColorController.setOppositeModeController(wheelMonoController);
         wheelMonoController.setOppositeModeController(wheelColorController);
-        inventoryColorController.setOppositeModeController(inventoryMonoController);
-        inventoryColorController.setMediaPlayerService(mediaPlayerService);
-        inventoryMonoController.setOppositeModeController(inventoryColorController);
-        inventoryMonoController.setMediaPlayerService(mediaPlayerService);
     }
 
     private void bindMainController() {
         splashMonoController.setRetroBoy(this);
         splashColorController.setRetroBoy(this);
-        inventoryMonoController.setRetroBoy(this);
-        inventoryColorController.setRetroBoy(this);
-        statisticsMonoController.setRetroBoy(this);
-        statisticsColorController.setRetroBoy(this);
         prizeDescriptionMonoController.setRetroBoy(this);
         prizeDescriptionColorController.setRetroBoy(this);
-        prizesHistoryMonoController.setRetroBoy(this);
-        prizesHistoryColorController.setRetroBoy(this);
         wheelMonoController.setRetroBoy(this);
         wheelColorController.setRetroBoy(this);
     }
@@ -330,14 +287,8 @@ public class RetroBoyController {
     private void initManePane() {
         splashMonoController.setMainPane(splashMono);
         splashColorController.setMainPane(splashColor);
-        inventoryMonoController.setMainPane(inventoryMono);
-        inventoryColorController.setMainPane(inventoryColor);
-        statisticsMonoController.setMainPane(statisticsMono);
-        statisticsColorController.setMainPane(statisticsColor);
         prizeDescriptionMonoController.setMainPane(prizeDescriptionMono);
         prizeDescriptionColorController.setMainPane(prizeDescriptionColor);
-        prizesHistoryMonoController.setMainPane(prizesHistoryMono);
-        prizesHistoryColorController.setMainPane(prizesHistoryColor);
         wheelMonoController.setMainPane(wheelMono);
         wheelColorController.setMainPane(wheelColor);
     }
@@ -426,13 +377,5 @@ public class RetroBoyController {
         return false;
         //TODO remove
 //        return transitionManagerService.isInventory();
-    }
-
-    @Deprecated
-    public void updateInventory() {
-        inventoryMonoController.setRerollLabel();
-        inventoryColorController.setRerollLabel();
-        inventoryMonoController.setHintLabel();
-        inventoryColorController.setHintLabel();
     }
 }

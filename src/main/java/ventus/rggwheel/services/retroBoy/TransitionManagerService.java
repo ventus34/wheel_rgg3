@@ -51,8 +51,6 @@ public class TransitionManagerService {
         } else {
             throw new IllegalStateException("Scene doesnt exist");
         }
-
-
     }
 
     public void switchMode() {
@@ -69,19 +67,17 @@ public class TransitionManagerService {
     }
 
     public boolean checkAndBack() {
-        boolean isCheckScene;
         if (currentScene == SceneEnum.PRIZE.ordinal()) {
             availableScenes.get(currentMode).get(currentScene).hide();
             currentScene = SceneEnum.WHEEL.ordinal();
             availableScenes.get(currentMode).get(currentScene).show();
-            isCheckScene = true;
+            return true;
         } else {
             availableScenes.get(currentMode).get(currentScene).hide();
             currentScene = SceneEnum.PRIZE.ordinal();
             availableScenes.get(currentMode).get(currentScene).show();
-            isCheckScene = false;
+            return false;
         }
-        return isCheckScene;
     }
 
 
