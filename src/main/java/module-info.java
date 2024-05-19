@@ -13,4 +13,6 @@ module rggwheel {
     exports ventus.rggwheel.model;
     exports ventus.rggwheel.services.audio;
     exports ventus.rggwheel.services.wheel;
+    exports ventus.rggwheel.controllers.common;
+    opens ventus.rggwheel.controllers.common to javafx.fxml;
 }

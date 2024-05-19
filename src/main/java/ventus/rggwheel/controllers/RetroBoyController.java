@@ -4,13 +4,13 @@ import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.effect.ColorAdjust;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Rectangle;
 import ventus.rggwheel.RetroBoyModesEnum;
+import ventus.rggwheel.controllers.common.RetroBoyConstants;
 import ventus.rggwheel.model.PaletteEnum;
 import ventus.rggwheel.model.PrizeEnum;
 import ventus.rggwheel.model.SaveState;
@@ -36,6 +36,7 @@ import java.util.Set;
  * </p>
  */
 public class RetroBoyController {
+
     @FXML
     private AnchorPane retroBoyPane;
     @FXML
@@ -146,99 +147,6 @@ public class RetroBoyController {
     @FXML
     private WheelColorController wheelColorController;
 
-    private TransitionManagerService transitionManagerService;
-    private final MediaPlayerService mediaPlayerService = new MediaPlayerService();
-    private final PrizesService prizesService = new PrizesService();
-    private SaveStateService saveStateService;
-    private boolean isAfterSplashScreen = false;
-
-    public void initialize() {
-        //Binding root panes
-        splashMonoController.setMainPane(splashMono);
-        splashColorController.setMainPane(splashColor);
-        inventoryMonoController.setMainPane(inventoryMono);
-        inventoryColorController.setMainPane(inventoryColor);
-        statisticsMonoController.setMainPane(statisticsMono);
-        statisticsColorController.setMainPane(statisticsColor);
-        prizeDescriptionMonoController.setMainPane(prizeDescriptionMono);
-        prizeDescriptionColorController.setMainPane(prizeDescriptionColor);
-        prizesHistoryMonoController.setMainPane(prizesHistoryMono);
-        prizesHistoryColorController.setMainPane(prizesHistoryColor);
-        wheelMonoController.setMainPane(wheelMono);
-        wheelColorController.setMainPane(wheelColor);
-
-        splashMonoController.setRetroBoy(this);
-        splashColorController.setRetroBoy(this);
-        inventoryMonoController.setRetroBoy(this);
-        inventoryColorController.setRetroBoy(this);
-        statisticsMonoController.setRetroBoy(this);
-        statisticsColorController.setRetroBoy(this);
-        prizeDescriptionMonoController.setRetroBoy(this);
-        prizeDescriptionColorController.setRetroBoy(this);
-        prizesHistoryMonoController.setRetroBoy(this);
-        prizesHistoryColorController.setRetroBoy(this);
-        wheelMonoController.setRetroBoy(this);
-        wheelColorController.setRetroBoy(this);
-
-        //Binding controllers to transitionManager;
-        //Order of controllers in list defines, transitions order;
-        ArrayList<FXMLController> colorScenesControllers = new ArrayList<>();
-        colorScenesControllers.add(splashColorController);
-        colorScenesControllers.add(prizeDescriptionColorController);
-        colorScenesControllers.add(wheelColorController);
-//        colorScenesControllers.add(inventoryColorController);
-//        colorScenesControllers.add(prizesHistoryColorController);
-//        colorScenesControllers.add(statisticsColorController);
-
-        ArrayList<FXMLController> monoScenesControllers = new ArrayList<>();
-        monoScenesControllers.add(splashMonoController);
-        monoScenesControllers.add(prizeDescriptionMonoController);
-        monoScenesControllers.add(wheelMonoController);
-//        monoScenesControllers.add(inventoryMonoController);
-//        monoScenesControllers.add(prizesHistoryMonoController);
-//        monoScenesControllers.add(statisticsMonoController);
-
-        BackgroundController backgroundController = new BackgroundController(screen, retroboyName);
-
-        transitionManagerService = new TransitionManagerService(monoScenesControllers, colorScenesControllers, backgroundController);
-        wheelColorController.setMediaPlayerService(mediaPlayerService);
-        wheelMonoController.setMediaPlayerService(mediaPlayerService);
-        wheelColorController.setPrizesService(prizesService);
-        wheelMonoController.setPrizesService(prizesService);
-        wheelColorController.setOppositeModeController(wheelMonoController);
-        wheelMonoController.setOppositeModeController(wheelColorController);
-        inventoryColorController.setOppositeModeController(inventoryMonoController);
-        inventoryColorController.setMediaPlayerService(mediaPlayerService);
-        inventoryMonoController.setOppositeModeController(inventoryColorController);
-        inventoryMonoController.setMediaPlayerService(mediaPlayerService);
-
-        buttons = new HashSet<>();
-        buttons.add(speedUp);
-        buttons.add(speedDown);
-        buttons.add(timeUp);
-        buttons.add(timeDown);
-        buttons.add(startButton);
-        buttons.add(color);
-        buttons.add(check);
-        buttons.add(colorMode);
-        buttons.add(spinButton);
-        buttons.add(random);
-        buttons.add(mode);
-
-        switchButtonsColor();
-
-        saveStateService = new SaveStateService();
-        inventoryMonoController.setHintLabel();
-        inventoryColorController.setHintLabel();
-        inventoryMonoController.setRerollLabel();
-        inventoryColorController.setRerollLabel();
-        unlockButtons();
-        wheelMonoController.setLabels();
-        wheelColorController.setLabels();
-        wheelMonoController.setPalette(PaletteEnum.GB_4, false);
-        wheelColorController.setPalette(PaletteEnum.GBC_1, false);
-    }
-
     @FXML
     private void spinAction() {
         if(transitionManagerService.getCurrentScene().equals(TransitionManagerService.SceneEnum.WHEEL)) {
@@ -280,7 +188,7 @@ public class RetroBoyController {
     @FXML
     private void timeDown() {
         Integer time = Integer.valueOf(wheelColorController.getSpinTime().getText());
-        if (time > 1) {
+        if (time > RetroBoyConstants.MIN_SPIN_TIME) {
             wheelColorController.setSpinTime(--time);
             wheelMonoController.setSpinTime(time);
         }
@@ -309,69 +217,11 @@ public class RetroBoyController {
         isAfterSplashScreen = true;
     }
 
-    private void initWhenRetroBoyVisible() {
-        setKeyListeners();
-    }
-
     @FXML
     private void switchMode() {
         transitionManagerService.switchMode();
         switchButtonsColor();
         mediaPlayerService.play(MediaPlayerService.AudioPlayerEnum.BUTTON, null);
-    }
-
-    public SaveState getProgress() {
-        return saveStateService.getCurrentState();
-    }
-
-    public void save() {
-        saveStateService.saveState();
-    }
-
-    public boolean isInventory(){
-        return false;
-        //TODO remove
-//        return transitionManagerService.isInventory();
-    }
-
-    void lockButtons() {
-        buttons.forEach(button -> button.setDisable(true));
-    }
-
-    void unlockButtons() {
-        buttons.forEach(button -> button.setDisable(false));
-    }
-
-    public void setPrizeDesc(PrizeEnum indicatedPrize) {
-        prizeDescriptionColorController.setDescription(indicatedPrize.getName(), indicatedPrize.getDescription());
-        prizeDescriptionMonoController.setDescription(indicatedPrize.getName(), indicatedPrize.getDescription());
-    }
-
-    private void setKeyListeners() {
-        Scene currentScene = retroBoyPane.getScene();
-        currentScene.setOnKeyPressed(event -> {
-            if (event.getCode() == KeyCode.R) {
-                randomizer();
-            }
-        });
-    }
-
-    private void switchButtonsColor(){
-        RetroBoyModesEnum currentMode = transitionManagerService.getCurrentMode();
-        switch (currentMode) {
-            case GB:
-                buttonMode.setEffect(new ColorAdjust(0.49,0.0,0,0));
-                buttonRandom.setEffect(new ColorAdjust(-0.71,0.0,0,0));
-                buttonCheck.setEffect(new ColorAdjust(0.33,0.0,0,0));
-                buttonSpin.setEffect(new ColorAdjust(0.03,0.0,0,0));
-                break;
-            case GBC:
-                buttonMode.setEffect(new ColorAdjust(0,-1.0,-0.28,0));
-                buttonRandom.setEffect(new ColorAdjust(0,-1.0,-0.28,0));
-                buttonCheck.setEffect(new ColorAdjust(0,-1.0,-0.55,0));
-                buttonSpin.setEffect(new ColorAdjust(0,-1.0,-0.55,0));
-                break;
-        }
     }
 
     @FXML
@@ -401,6 +251,184 @@ public class RetroBoyController {
         wheelMonoController.setLabels();
     }
 
+    private TransitionManagerService transitionManagerService;
+    private final MediaPlayerService mediaPlayerService = new MediaPlayerService();
+    private final PrizesService prizesService = new PrizesService();
+    private SaveStateService saveStateService = new SaveStateService();
+    private boolean isAfterSplashScreen = false;
+
+    public void initialize() {
+        initManePane();
+        bindMainController();
+        initSceneTransitionManager();
+        bindServices();
+
+        setupButtons();
+        switchButtonsColor();
+        unlockButtons();
+        setLabels();
+        setPalette();
+    }
+
+    private void setPalette() {
+        wheelMonoController.setPalette(PaletteEnum.GB_4, false);
+        wheelColorController.setPalette(PaletteEnum.GBC_1, false);
+    }
+
+    private void setLabels() {
+        inventoryMonoController.setHintLabel();
+        inventoryColorController.setHintLabel();
+        inventoryMonoController.setRerollLabel();
+        inventoryColorController.setRerollLabel();
+        wheelMonoController.setLabels();
+        wheelColorController.setLabels();
+    }
+
+    private void setupButtons() {
+        buttons = new HashSet<>();
+        buttons.add(speedUp);
+        buttons.add(speedDown);
+        buttons.add(timeUp);
+        buttons.add(timeDown);
+        buttons.add(startButton);
+        buttons.add(color);
+        buttons.add(check);
+        buttons.add(colorMode);
+        buttons.add(spinButton);
+        buttons.add(random);
+        buttons.add(mode);
+    }
+
+    private void bindServices() {
+        wheelColorController.setMediaPlayerService(mediaPlayerService);
+        wheelMonoController.setMediaPlayerService(mediaPlayerService);
+        wheelColorController.setPrizesService(prizesService);
+        wheelMonoController.setPrizesService(prizesService);
+        wheelColorController.setOppositeModeController(wheelMonoController);
+        wheelMonoController.setOppositeModeController(wheelColorController);
+        inventoryColorController.setOppositeModeController(inventoryMonoController);
+        inventoryColorController.setMediaPlayerService(mediaPlayerService);
+        inventoryMonoController.setOppositeModeController(inventoryColorController);
+        inventoryMonoController.setMediaPlayerService(mediaPlayerService);
+    }
+
+    private void bindMainController() {
+        splashMonoController.setRetroBoy(this);
+        splashColorController.setRetroBoy(this);
+        inventoryMonoController.setRetroBoy(this);
+        inventoryColorController.setRetroBoy(this);
+        statisticsMonoController.setRetroBoy(this);
+        statisticsColorController.setRetroBoy(this);
+        prizeDescriptionMonoController.setRetroBoy(this);
+        prizeDescriptionColorController.setRetroBoy(this);
+        prizesHistoryMonoController.setRetroBoy(this);
+        prizesHistoryColorController.setRetroBoy(this);
+        wheelMonoController.setRetroBoy(this);
+        wheelColorController.setRetroBoy(this);
+    }
+
+    private void initManePane() {
+        splashMonoController.setMainPane(splashMono);
+        splashColorController.setMainPane(splashColor);
+        inventoryMonoController.setMainPane(inventoryMono);
+        inventoryColorController.setMainPane(inventoryColor);
+        statisticsMonoController.setMainPane(statisticsMono);
+        statisticsColorController.setMainPane(statisticsColor);
+        prizeDescriptionMonoController.setMainPane(prizeDescriptionMono);
+        prizeDescriptionColorController.setMainPane(prizeDescriptionColor);
+        prizesHistoryMonoController.setMainPane(prizesHistoryMono);
+        prizesHistoryColorController.setMainPane(prizesHistoryColor);
+        wheelMonoController.setMainPane(wheelMono);
+        wheelColorController.setMainPane(wheelColor);
+    }
+
+
+    private void initSceneTransitionManager() {
+        //Order of controllers in list defines, transitions order;
+        ArrayList<FXMLController> colorScenesControllers = bindColorScenes();
+        ArrayList<FXMLController> monoScenesControllers = bindMonoScenes();
+
+        BackgroundController backgroundController = new BackgroundController(screen, retroboyName);
+
+        transitionManagerService = new TransitionManagerService(monoScenesControllers, colorScenesControllers, backgroundController);
+    }
+
+    private ArrayList<FXMLController> bindMonoScenes() {
+        ArrayList<FXMLController> monoScenesControllers = new ArrayList<>();
+        monoScenesControllers.add(splashMonoController);
+        monoScenesControllers.add(prizeDescriptionMonoController);
+        monoScenesControllers.add(wheelMonoController);
+        return monoScenesControllers;
+    }
+
+    private ArrayList<FXMLController> bindColorScenes() {
+        ArrayList<FXMLController> colorScenesControllers = new ArrayList<>();
+        colorScenesControllers.add(splashColorController);
+        colorScenesControllers.add(prizeDescriptionColorController);
+        colorScenesControllers.add(wheelColorController);
+        return colorScenesControllers;
+    }
+
+    public void setPrizeDesc(PrizeEnum indicatedPrize) {
+        prizeDescriptionColorController.setDescription(indicatedPrize.getName(), indicatedPrize.getDescription());
+        prizeDescriptionMonoController.setDescription(indicatedPrize.getName(), indicatedPrize.getDescription());
+    }
+
+    private void initWhenRetroBoyVisible() {
+        setKeyListeners();
+    }
+
+    public SaveState getProgress() {
+        return saveStateService.getCurrentState();
+    }
+
+    public void save() {
+        saveStateService.saveState();
+    }
+
+    void lockButtons() {
+        buttons.forEach(button -> button.setDisable(true));
+    }
+
+    void unlockButtons() {
+        buttons.forEach(button -> button.setDisable(false));
+    }
+
+    private void setKeyListeners() {
+        Scene currentScene = retroBoyPane.getScene();
+        currentScene.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.R) {
+                randomizer();
+            }
+        });
+    }
+
+    private void switchButtonsColor(){
+        RetroBoyModesEnum currentMode = transitionManagerService.getCurrentMode();
+        switch (currentMode) {
+            case GB:
+                buttonMode.setEffect(RetroBoyConstants.HSB_GREEN);
+                buttonRandom.setEffect(RetroBoyConstants.HSB_BLUE);
+                buttonCheck.setEffect(RetroBoyConstants.HSB_YELLOW);
+                buttonSpin.setEffect(RetroBoyConstants.HSB_RED);
+                break;
+            case GBC:
+                buttonMode.setEffect(RetroBoyConstants.HSB_GREY_LIGHT);
+                buttonRandom.setEffect(RetroBoyConstants.HSB_GREY_LIGHT);
+                buttonCheck.setEffect(RetroBoyConstants.HSB_GREY_DARK);
+                buttonSpin.setEffect(RetroBoyConstants.HSB_GREY_DARK);
+                break;
+        }
+    }
+
+    @Deprecated
+    public boolean isInventory(){
+        return false;
+        //TODO remove
+//        return transitionManagerService.isInventory();
+    }
+
+    @Deprecated
     public void updateInventory() {
         inventoryMonoController.setRerollLabel();
         inventoryColorController.setRerollLabel();
